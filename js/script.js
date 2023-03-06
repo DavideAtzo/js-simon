@@ -18,22 +18,36 @@ function NumberFor() {
 setTimeout(inputUtente, 5000);
 function inputUtente() {
     for (let i = 0; i < 5; i++) {
-       let numGiocatore = Number(prompt('Quali numeri hai visto??'));
-       arrayGiocatore.push(numGiocatore);
+        let numGiocatore = Number(prompt('Quali numeri hai visto??'));
+        arrayGiocatore.push(numGiocatore);
         console.log(arrayGiocatore);
-    }
-    for(let i = 0; i < randomArray.length; i++){
-        if(randomArray.includes(arrayGiocatore)){
-            console.log('complimenti');
-        } else {
-            console.log('ritenta');
-        }
     }
 }
 
-let arrayGiocatore =[];
+function checkNumber() {
+    for (let i = 0; i < randomArray.length; i++) {
+        if (randomArray.includes(numGiocatore[i])) {
+            giuste.push(numGiocatore[i]);
+        } else {
+            risultato.push(numGiocatore[i]);
+            sbagliate.push(numGiocatore[i]);
+        }
+    }
+    return giuste;
+}
+setTimeout(verdetto, 6000);
+function verdetto() {
+    const risultato = document.getElementById('risultato');
+    risultato.append(`Hai indovinato: ${giuste.length} numeri, eccoli qui: ${giuste}`);
+}
+
+
+const giuste = [];
+const sbagliate = [];
+let arrayGiocatore = []; 
 const randomArray = [];
 const numeri = document.getElementById('numeri');
+
 NumberFor()
 numeri.innerHTML = randomArray;
 
