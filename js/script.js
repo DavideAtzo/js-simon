@@ -11,11 +11,11 @@ function NumberFor() {
         console.log(numbers);
     }
 }
-setTimeout(htmlElement, 3000);
+setTimeout(htmlElement, 1000);
 function htmlElement() {
-    document.getElementById("numeri").innerHTML = randomArray;
+    numeri.innerHTML = randomArray;
 }
 const randomArray = [];
-
+const numeri = document.getElementById('numeri');
 NumberFor()
-htmlElement()
+
