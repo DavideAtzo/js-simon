@@ -12,4 +12,4 @@ function randomNumber() {
     return randomArray;
 }
 
-randomNumber()
+document.getElementById("numeri").innerHTML = randomNumber();
