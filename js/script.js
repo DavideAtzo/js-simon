@@ -1,12 +1,21 @@
 'use strict';
 
-function randomNumber() {
+function randomNumber(max) {
+    return Math.floor(Math.random() * max) + 1;
+}
+function NumberFor() {
     for (let i = 0; i < 5; i++) {
-        randomArray.push(Math.floor((Math.random() * 200) + 1));
-        console.log(randomArray[i])
+        // let randomArray = 
+        let numbers = randomNumber(200);
+        randomArray.push(numbers);
+        console.log(numbers);
     }
-     return randomArray;
+}
+setTimeout(htmlElement, 3000);
+function htmlElement() {
+    document.getElementById("numeri").innerHTML = randomArray;
 }
 const randomArray = [];
-// document.getElementById("numeri").innerHTML = randomNumber();
-randomNumber()
+
+NumberFor()
+htmlElement()
