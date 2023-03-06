@@ -3,6 +3,11 @@
 function randomNumber(max) {
     return Math.floor(Math.random() * max) + 1;
 }
+setTimeout(htmlElement, 3000);
+function htmlElement() {
+    numeri.innerHTML = 'ci riusciamo??';
+}
+
 function NumberFor() {
     for (let i = 0; i < 5; i++) {
         // let randomArray = 
@@ -11,11 +16,8 @@ function NumberFor() {
         console.log(numbers);
     }
 }
-setTimeout(htmlElement, 1000);
-function htmlElement() {
-    numeri.innerHTML = randomArray;
-}
+
 const randomArray = [];
 const numeri = document.getElementById('numeri');
 NumberFor()
-
+numeri.innerHTML = randomArray;
