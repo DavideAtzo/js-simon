@@ -10,19 +10,22 @@ function htmlElement() {
 
 function NumberFor() {
     for (let i = 0; i < 5; i++) {
-        // let randomArray = 
         let numbers = randomNumber(200);
         randomArray.push(numbers);
         console.log(numbers);
     }
 }
-setTimeout(inputUtente, 4000);
+setTimeout(inputUtente, 5000);
 function inputUtente() {
-    let numUtente = prompt('inserisci un numero');
-    alert('funziona');
+    for (let i = 0; i < 5; i++) {
+       let numGiocatore = Number(prompt('Quali numeri hai visto??'));
+       arrayGiocatore.push(numGiocatore);
+        console.log(arrayGiocatore);
+    }
+
 }
 
-
+let arrayGiocatore =[];
 const randomArray = [];
 const numeri = document.getElementById('numeri');
 NumberFor()
