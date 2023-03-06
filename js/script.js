@@ -1,15 +1,12 @@
 'use strict';
 
 function randomNumber() {
-    let randomArray = [];
-    while(randomArray.length < 5){
-        const numRandom = Math.floor(Math.random() * 200) + 1;
-        console.log(numRandom);
-        if (!randomArray.includes(numRandom)) {
-            randomArray.push(numRandom);
-          }
+    for (let i = 0; i < 5; i++) {
+        randomArray.push(Math.floor((Math.random() * 200) + 1));
+        console.log(randomArray[i])
     }
-    return randomArray;
+     return randomArray;
 }
-
-document.getElementById("numeri").innerHTML = randomNumber();
+const randomArray = [];
+// document.getElementById("numeri").innerHTML = randomNumber();
+randomNumber()
