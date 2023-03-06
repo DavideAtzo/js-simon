@@ -22,7 +22,13 @@ function inputUtente() {
        arrayGiocatore.push(numGiocatore);
         console.log(arrayGiocatore);
     }
-
+    for(let i = 0; i < randomArray.length; i++){
+        if(randomArray.includes(arrayGiocatore)){
+            console.log('complimenti');
+        } else {
+            console.log('ritenta');
+        }
+    }
 }
 
 let arrayGiocatore =[];
@@ -30,3 +36,4 @@ const randomArray = [];
 const numeri = document.getElementById('numeri');
 NumberFor()
 numeri.innerHTML = randomArray;
+
