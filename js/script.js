@@ -5,7 +5,7 @@ function randomNumber(max) {
 }
 setTimeout(htmlElement, 3000);
 function htmlElement() {
-    numeri.innerHTML = 'ci riusciamo??';
+    numeri.innerHTML = '';
 }
 
 function NumberFor() {
@@ -16,6 +16,12 @@ function NumberFor() {
         console.log(numbers);
     }
 }
+setTimeout(inputUtente, 4000);
+function inputUtente() {
+    let numUtente = prompt('inserisci un numero');
+    alert('funziona');
+}
+
 
 const randomArray = [];
 const numeri = document.getElementById('numeri');
