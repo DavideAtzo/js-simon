@@ -17,37 +17,27 @@ function NumberFor() {
 }
 setTimeout(inputUtente, 5000);
 function inputUtente() {
+    const giuste = [];
+    const sbagliate = [];
+    let arrayGiocatore = [];
     for (let i = 0; i < 5; i++) {
-        let numGiocatore = Number(prompt('Quali numeri hai visto??'));
-        arrayGiocatore.push(numGiocatore);
+        let inputGiocatore = Number(prompt('Quali numeri hai visto??'));
+        arrayGiocatore.push(inputGiocatore);
         console.log(arrayGiocatore);
     }
-}
-
-function checkNumber() {
     for (let i = 0; i < randomArray.length; i++) {
-        if (randomArray.includes(numGiocatore[i])) {
-            giuste.push(numGiocatore[i]);
+        if (randomArray.includes(arrayGiocatore[i])) {
+            giuste.push(arrayGiocatore[i]);
         } else {
-            risultato.push(numGiocatore[i]);
-            sbagliate.push(numGiocatore[i]);
+            sbagliate.push(arrayGiocatore[i]);
         }
     }
+    risultato.innerHTML = `Hai indovinato: ${giuste.length} numeri, sono questi: ${giuste}`;
     return giuste;
 }
-setTimeout(verdetto, 6000);
-function verdetto() {
-    const risultato = document.getElementById('risultato');
-    risultato.append(`Hai indovinato: ${giuste.length} numeri, eccoli qui: ${giuste}`);
-}
 
-
-const giuste = [];
-const sbagliate = [];
-let arrayGiocatore = []; 
 const randomArray = [];
 const numeri = document.getElementById('numeri');
-
+const risultato = document.getElementById('risultato');
 NumberFor()
 numeri.innerHTML = randomArray;
-
